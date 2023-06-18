@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Formulário de login</title>
+    <link rel="stylesheet" href="css/agendarHorario.css"/>
+
+  <style>
+    #vd1 {
+      border-radius: 40px 40px 40px 40px;
+      width: 400px;
+    }
+  </style>
+  </head>
+  <body>
+
+    <main>
+      <div class="box">
+        <div class="inner-box">
+          <div class="forms-wrap">
+
+            <form action="index.html" autocomplete="off" class="sign-in-form">
+
+              <div class="logo">
+                <h4 id="font">
+                  <cor>Studio</cor> Estética</h4>
+              </div>
+
+              <div class="heading">
+                <h2>Minha Agenda</h2>
+                <h6>Já possui um horário?</h6>
+                <a href="#" class="toggle">Consulte aqui!</a>
+              </div>
+
+              <div class="actual-form">
+
+                <div class="input-wrap">
+                  <input type="text" minlength="4" class="input-field" autocomplete="off" required>
+                  <label>Nome</label>
+                </div>
+                
+                <div class="input-wrap">
+                  <input type="email" class="input-field" autocomplete="off" required>
+                  <label>E-mail</label>
+                </div>
+
+                <div class="input-wrap">
+                  <input type="date" class="input-field" autocomplete="off" required>
+                  <label>Data e Hora</label>
+                </div>
+                
+                <div class="input-wrap">
+                  <select id="diminuir" name="servico"  id="servicos" class="input-field" required
+                 >
+                    
+                    <option value="" id="diminuir"> </option>
+                    <option value="Visagismo - R$190,00">Visagismo - R$190,00</option>
+                    <option value="Sobracelhas - R$30,00">Sobracelhas - R$30,00</option>
+                    <option value="Maquiagem - R$60,00">Maquiagem - R$60,00</option>
+                    <option value="Penteados de Noiva - R$300,00">Penteados de Noiva - R$300,00</option>
+                    <option value="Manicure - R$25,00">Manicure - R$25,00</option>
+                    <option value="Pedicure - R$25,00">Pedicure - R$25,00</option>
+                    <option value="Manicure em Gel- R$45,00">Manicure em Gel - R$45,00</option>
+                    <option value="Pedicure em Gel- R$45,00">Pedicure em Gel - R$45,00</option>
+                    <option value="Depilação com Cera - R$70,00">Depilação com Cera - R$70,00</option>
+                    <option value="Depilaçaõ a Laser - R$110,00">Depilaçaõ a Laser - R$110,00</option>
+                    <option value="Alongamneto de cílios - R$80,00">Alongamneto de cílios - R$80,00</option>
+                    <option value="Permanente de cílios - R$100,00">Permanente de cílios - R$100,00</option>
+                    <option value="Banho de lua - R$110,00">Banho de lua- R$110,00 </option>
+                    <option value="Massagem Relaxante - R$60,00">Massagem Relaxante - R$60,00</option>
+                    <option value="Cortes Femininos - R$30,00">Cortes Femininos - R$30,00</option>
+                    <option value="Cortes Masculinos - R$25,00">Cortes Masculinos - R$25,00</option>
+                    <option value="Barba - R$25,00">Barba - R$25,00</option>
+                    
+                  </select>
+                  <label>Serviços </label>
+                </div>
+                <input type="submit" value="Enviar Agendamento" class="sign-btn">
+
+                <p class="text">
+
+                  <a href="#"> </a> 
+                </p>
+              </div>
+
+            </form>
+
+            <form action="index.html" autocomplete="off" class="sign-up-form">
+
+              <div class="logo">
+                <img src="img/c.png" alt="">
+                <h4>DEV SCHOOL</h4>
+              </div>
+
+              <div class="heading">
+                <h2>Criar conta</h2>
+                <h6>Já tem uma conta?</h6>
+                <a href="#" class="toggle">entrar</a>
+              </div>
+
+              <div class="actual-form">
+
+                <div class="input-wrap">
+                  <input type="text" minlength="4" class="input-field" autocomplete="off" required>
+                  <label>Name</label>
+                </div>
+
+                <div class="input-wrap">
+                  <input type="email" class="input-field" autocomplete="off" required>
+                  <label>E-mail</label>
+                </div>
+
+                <div class="input-wrap">
+                  <input type="password" minlength="4" class="input-field" autocomplete="off" required>
+                  <label>Passoword</label>
+                </div>
+
+                <input type="submit" value="Sign Up" class="sign-btn">
+
+                <p class="text">
+                  Ao me inscrever, concordo com os
+                  <a href="#"> Termos e Serviços</a> e
+                  <a href="#"> Política de Privacidade</a>
+                </p>
+              </div>
+
+            </form>
+          </div>
+
+          <div class="img">
+            <div class="images">
+              <img id="vd1" src="img/thumb.gif" class="image" alt="">
+            </div>
+
+          </div>
+
+        </div>
+      </div>
+    </main>
+
+    
+<script src="js/Form.js"></script>
+    
+  </body>
+</html>

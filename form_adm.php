@@ -1,10 +1,3 @@
-<?php
-//Exibir mensagem através do session_start 
-
-session_start();
-
-?>
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -12,7 +5,7 @@ session_start();
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>InnoHub - We're available for marketing</title>
+  <title>Studio Estética - Sistema | ADM</title>
 
   <!-- 
     - favicon
@@ -38,46 +31,13 @@ session_start();
       background-color: Snow;
       
     }
-    input {
-      font-size: 40px;
-    }
-    #aumentar {
-      font-size: 20px;
-    }
-      #logo1 {
-        border-radius: 50%;
-      }
-      cor {
-        color: #ff4f61;
-      }
-      #border {
-        border-radius: 50%;
-      }
-      select {
-        width: 50px;
-      }
-    #diminuir {
-      font-size: 13px;
-    }
-    #red {
-      color: red;
-      font-size: 13px;
+    #aumentar_letra {
+      font-size: 15px;
     }
     .box {
-      height: 570px;
-    }
-    #blake {
-      color: Black;
-    }
-    label {
-      color: Black;
-    }
-    .sign-btn {
-      font-size: 15px;
-    }
-    .fonte {
-      font-size: 15px;
-      border-color: #ff4f61;
+      margin-top: 40px;
+      margin-left: 10px;
+      margin-right: 10px;
     }
     </style>
 </head>
@@ -85,7 +45,7 @@ session_start();
 <body id="top">
 
   <!-- 
-    - #HEADER
+{    - #HEADER
   -->
 
   <header class="header" data-header>
@@ -114,10 +74,6 @@ session_start();
           <li>
             <a href="#contact1" class="navbar-link" data-nav-link>Contacte-nos</a>
           </li>
-          
-          <li>
-            <a href="form_adm.php" class="navbar-link" data-nav-link>Administradores</a>
-          </li>
 
           <li>
             <a href="form_agendamento.php" class="btn btn-primary">Agendar Horário</a>
@@ -139,49 +95,128 @@ session_start();
         <div class="inner-box">
           <div class="forms-wrap">
 
-            <form action="listar_agendamentos.php" method="POST" autocomplete="off" class="sign-in-form">
+            <form 
+            method="POST" 
+            action="login_prop.php" 
+            autocomplete="off" 
+            class="sign-in-form">
 
               <div class="logo">
-                <h4>Studio <cor>Estética</cor></h4>
+                <h4>Studio<cor> Estética</cor></h4>
               </div>
 
               <div class="heading">
-                <h2>Buscar Agendamentos</h2> 
-                <h5 id="diminuir">Ainda não possui um agendamento? </h5>
-                <a id="red" href="form_agendamento.php">Agende seu horário! 📆</a>  
+                <h2>Bem-Vindo de Volta!</h2>
+                <h6 id="diminuir">Ainda não se inscreveu?</h6>
+                <a id="diminuir" href="#" class="toggle"><cor>Inscreva-se!</cor></a>
               </div>
 
               <div class="actual-form">
 
-              <h4 id="diminuir">E-mail🔎</h4> <br>
                 <div class="input-wrap">
-                  <input type="email" 
-                  name="email"                
-                  class="fonte"
-                  placeholder="Digite o seu e-mail" 
+                  <p id="diminuir">E-mail | ADM <cor>*</cor></p>
+                  <input 
+                  id="fonte"
+                  type="email"
+                  name="email"
+                  class="input-field" 
+                  placeholder="Ex.: contato@dominio.com"
                   autocomplete="off" 
                   required>
-                  
                 </div>
-          
+                <br>
+                <div class="input-wrap">
+                  <p id="diminuir">Senha | ADM</p>
+                  <input 
+                  id="fonte"
+                  class="input-field"
+                  type="text" 
+                  minlength="4"
+                  name="senha"
+                  placeholder="Ex.: login123"
+                  autocomplete="off" required>
+                </div>
+                <br>
                 <input 
-                type="submit" 
-                value="Próximo" 
+                id="aumentar_letra"
+                type="submit"
+                name="submit"
+                value="Entrar" 
                 class="sign-btn">
 
-                <p id="diminuir" class="text">
-                 💡 Consulta criptografada
-                  <a id="red" href="index.html">Studio Estética</a>
+              </div>
+
+            </form>
+            
+            <form action="insert_prop.php" autocomplete="off" method="POST" class="sign-up-form">
+             <br>
+              <div class="logo">
+                <h4>Studio<cor> Estética</cor></h4>
+              </div>
+
+              <div class="heading">
+                <h2>Junte-se a Nós!</h2>
+                <h6 id="diminuir">Já tem uma conta?</h6>
+                <a id="diminuir" href="#" class="toggle"><cor>Entrar</cor></a>
+                </div>
+
+              <div class="actual-form">
+
+                <div class="input-wrap">
+                  <p id="diminuir">Nome | ADM </p>
+                  <input 
+                  id="fonte"
+                  placeholder="Ex.: Maria Luísa Silva"
+                  type="text" 
+                  name="nome_adm"
+                  class="input-field" 
+                  autocomplete="off" 
+                  required>
+                </div>
+                <br>
+                <div class="input-wrap">
+                  <p>E-mail | ADM<cor>*</cor></p>
+                  <input 
+                  id="fonte"
+                  placeholder="Ex.: contato@dominido.com"
+                  type="email" 
+                  class="input-field" 
+                  autocomplete="off"
+                  name="email_adm"
+                  required>
+                </div>
+                <br>
+                <div class="input-wrap">
+                  <p id="diminuir">Senha | ADM <cor>*</cor></p>
+                  <input 
+                  id="fonte"
+                  type="text" 
+                  minlength="4" 
+                  class="input-field" 
+                  placeholder="Ex.: login123"
+                  autocomplete="off"
+                  name="senha_adm"
+                  required>
+                </div>
+                <br>
+                <input 
+                id="aumentar_letra"
+                type="submit"
+                name="cadastrar"
+                value="Continuar" 
+                class="sign-btn">
+
+                <p id="diminnt">
+                  <a href="#">Ao me inscrever, concordo com os <cor>Termos de Serviços e Política de Privacidade</cor></a>
                 </p>
               </div>
 
             </form>
-           
           </div>
 
           <div class="img">
             <div class="images">
-              <img src="img/icon3.png" class="image" alt="">
+              <img width="50" src="img/consultas.jpg" class="image" alt="">
             </div>
 
           </div>
@@ -189,6 +224,30 @@ session_start();
         </div>
       </div>
     </main>
+
+    
+<script>
+const inputs = document.querySelectorAll(".input-field");
+const toggle_btn = document.querySelectorAll(".toggle");
+const main = document.querySelector("main");
+
+inputs.forEach((inp) => {
+    inp.addEventListener("focus", () => {
+        inp.classList.add("active");
+    });
+
+    inp.addEventListener("blur", () => {
+        if (inp.value != "") return;
+        inp.classList.remove("active");
+    });
+});
+
+toggle_btn.forEach((btn) => {
+    btn.addEventListener("click", () => {
+        main.classList.toggle("sign-up-mode");
+    })
+});
+</script>
 
     <!-- Javascript file -->
 
@@ -221,8 +280,8 @@ session_start();
 
                   <h3 class="h3 card-title">Nosso E-mail</h3>
 
-                  <a href="mailto:Studioestetica2023@gmail.com" class="card-link">Studioestetica2023@gmail.com</a>
-  
+                  <a href="mailto:hello@luaz.com" class="card-link">studioestetica@gmail.com</a>
+
                 </div>
 
               </div>
@@ -261,7 +320,7 @@ session_start();
                   <h3 class="h3 card-title">Ligue-nos</h3>
 
                   <a href="tel:+1234567890" class="card-link">(81) 97301-2469</a>
-                  <a href="tel:+2414524526" class="card-link">(81) 9189-0522</a>
+                  <a href="tel:+2414524526" class="card-link">+241 452 4526</a>
 
                 </div>
 
@@ -288,7 +347,7 @@ session_start();
     <div class="container2">
 
       <p class="copyright">
-        &copy; 2023 Todos os Direitos Reservados <a href="index.html" class="copyright-link">Studio Estetica 🦋✨</a>
+        &copy; 2023 Todos os Direitos Reservados <a href="#" class="copyright-link">studio-estetica </a>
       </p>
 
     </div>

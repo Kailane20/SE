@@ -1,5 +1,4 @@
-<?php
-//Exibir mensagem através do session_start 
+<!-- <?php
 session_start();
 
 //Arquivo de conexão para o B.D.
@@ -63,8 +62,7 @@ if (!verificarDisponibilidade($conexao, $data, $hora)) {
     $conexao->close();
 }
 ?>
-
-
+-->
 <!DOCTYPE html>
 <html lang="en">
 
@@ -142,10 +140,6 @@ if (!verificarDisponibilidade($conexao, $data, $hora)) {
       font-size: 15px;
       border-color: #ff4f61;
     }
-    .erro {
-            color: red;
-            font-size: 12px;
-        }
     </style>
 </head>
 
@@ -205,7 +199,7 @@ if (!verificarDisponibilidade($conexao, $data, $hora)) {
       <div class="box">
         <div class="inner-box">
           <div class="forms-wrap">
-            <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="POST" autocomplete="off" class="sign-in-form">
+            <form action="inclusao.php" method="POST" autocomplete="off" class="sign-in-form">
               <div id="logo" class="logo">
                 <h4>Studio <cor>Estética</cor></h4>
               </div>
@@ -213,7 +207,7 @@ if (!verificarDisponibilidade($conexao, $data, $hora)) {
               <div class="heading">
                 <h2>Bem-Vindo!</h2>
                 <p id="diminuir">Já possui um agendamento?</p>
-                <a id="red1" id="diminuir" href="form_consultas.php">Consulte-me!</a>
+                <a id="red1" id="diminuir" href="form_consultas.php">Click aqui!</a>
               </div>
               <div class="actual-form">
               <p id="diminuir">Nome<cor>*</cor></p>
@@ -221,7 +215,7 @@ if (!verificarDisponibilidade($conexao, $data, $hora)) {
                   <input
                     type="text"                    
                     name="cliente1"
-                    autocomplete="true"
+                    autocomplete="off"
                     required
                     class="fonte"
                     placeholder="Ex.: nome completo..."
@@ -231,12 +225,12 @@ if (!verificarDisponibilidade($conexao, $data, $hora)) {
                 <p id="diminuir">Telefone<cor>*</cor></p>
                 <div class="input-wrap">
                   <input
-                    type="text"
+                    type="tel"
                     name="telefone"
-                    autocomplete="true"
+                    autocomplete="off"
                     required
                     class="fonte"
-                    placeholder="Ex.: (DD) XXXX-XXXX"
+                    placeholder="Ex.: seu número com DD..."
                   />
                   
                 </div>
@@ -248,7 +242,7 @@ if (!verificarDisponibilidade($conexao, $data, $hora)) {
                     name="email"
                     class="fonte"
                     placeholder="Ex.: contato@dominio.com"
-                    autocomplete="true"
+                    autocomplete="off"
                     required
                   />
                   
@@ -257,9 +251,8 @@ if (!verificarDisponibilidade($conexao, $data, $hora)) {
                 <!--Serviços-->
                 <div class="input-wrap">
                   
-                  <h4>Agende seu horário<cor>*</cor></h4><br>
-                  <div class="erro"><?php echo $erro; ?></div>
-                    
+                  <h4>Agende seu horário<cor>*</cor></h4>
+                    <br>
                   <select id="diminuir" name="servico"  id="servicos" class="input-field" required
                  >
                     
@@ -284,7 +277,7 @@ if (!verificarDisponibilidade($conexao, $data, $hora)) {
                     
                   </select>
                 </div>    
-                <br> <br><br>
+                <br> <br>
                 
                 <div class="input-wrap">    
                   <select id="diminuir" name="profissional" class="input-field"
